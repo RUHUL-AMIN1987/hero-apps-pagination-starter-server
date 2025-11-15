@@ -20,7 +20,7 @@ app.use(async (req, res, next) => {
 
 //ports & clients
 const port = process.env.PORT || 5000;
-const uri = `mongodb+srv://${process.env.DBUSER}:${process.env.DBPASS}@mern-cluster.voqlfwt.mongodb.net/?appName=mern-cluster`;
+const uri = process.env.URL;
 const client = new MongoClient(uri, {
   serverApi: {
     version: ServerApiVersion.v1,
